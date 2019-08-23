@@ -1,7 +1,7 @@
 # rtl8821CU
 [![Build Status](https://travis-ci.org/whitebatman2/rtl8821CU.svg?branch=master)](https://travis-ci.org/whitebatman2/rtl8821CU)
 
-This is a fork from the whitebatman2/rtl8821CU library
+This is a fork from the whitebatman2/rtl8821CU library.
 Compilation error "gcc: error: -mfloat-abi=soft and -mfloat-abi=hard may not be used together" is fixed in this repository.
 
 Tested in the following environment.
