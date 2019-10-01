@@ -1920,6 +1920,9 @@ export CONFIG_RTL8821CU = m
 all: modules
 
 modules:
+	sudo cp /lib/modules/$(KVER)/build/arch/arm/Makefile /lib/modules/$(KVER)/build/arch/arm/Makefile.$(shell date +%Y%m%d%H%M)
+        sudo sed -i 's/-msoft-float//' /lib/modules/$(KVER)/build/arch/arm/Makefile
+        sudo ln -s /lib/modules/$(KVER)/build/arch/arm /lib/modules/$(KVER)/build/arch/armv7l
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
 
 strip:
