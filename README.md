@@ -32,6 +32,9 @@ If you later on want to remove it again, do the following:
     sudo dkms remove ${DRV_NAME}/${DRV_VERSION} --all
 
 ## Build and install without DKMS
+First, makesure the kernel headers are installed
+RaspberryPi -> `sudo apt install raspberrypi-kernel-headers`
+
 Use following commands in source directory:
 ```
 make
