@@ -41,6 +41,14 @@ make
 sudo make install
 sudo modprobe 8821cu
 ```
+
+### Checking installed driver
+If you successfully install the driver, the driver is installed on `/lib/modules/<linux version>/kernel/drivers/net/wireless`. Check the driver with the `ls` command:
+```
+ls /lib/modules/$(uname -r)/kernel/drivers/net/wireless
+```
+Make sure `8821cu.ko` file present on that directory
+
 ## Raspberry Pi
 To build this driver on Raspberry Pi you need to set correct platform in Makefile.
 Change
