@@ -2133,7 +2133,7 @@ static int retriveFromFile(const char *path, u8 *buf, u32 sz)
 			RTW_INFO("%s openFile path:%s fp=%p\n", __FUNCTION__, path , fp);
 
 			oldfs = get_fs();
-			set_fs(KERNEL_DS));
+			set_fs(KERNEL_DS);
 			ret = readFile(fp, buf, sz);
 			set_fs(oldfs);
 			closeFile(fp);
